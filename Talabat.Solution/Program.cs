@@ -34,7 +34,7 @@ namespace Talabat.Solution
             #endregion
 
             webApplicationBuilder.Services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
-
+            webApplicationBuilder.Services.AddInfrastructureServices(webApplicationBuilder.Configuration);
             #endregion
             #region Ask CLR for createing object from dbcontent explcitre
             var app = webApplicationBuilder.Build();
